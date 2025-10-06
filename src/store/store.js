@@ -5,8 +5,20 @@ import interviewReducer from './interviewSlice';
 
 const persistConfig = {
   key: 'root',
+  version: 1,
   storage,
   whitelist: ['candidates', 'currentCandidate'],
+  migrate: (state) => {
+    // Migration function to handle state changes
+    // If state is corrupted or from old version, return initial state
+    if (!state || typeof state !== 'object') {
+      return {
+        candidates: [],
+        currentCandidate: null,
+      };
+    }
+    return state;
+  },
 };
 
 const persistedReducer = persistReducer(persistConfig, interviewReducer);
