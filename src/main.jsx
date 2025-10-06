@@ -13,6 +13,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <PersistGate 
         loading={null} 
         persistor={persistor}
+        onBeforeLift={() => {
+          return new Promise((resolve) => {
+            // Small delay to ensure state is fully loaded
+            setTimeout(resolve, 50);
+          });
+        }}
       >
         <ConfigProvider
           theme={{

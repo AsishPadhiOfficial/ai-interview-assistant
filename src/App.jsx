@@ -19,15 +19,24 @@ function App() {
   const [activeTab, setActiveTab] = useState('interviewee');
   const [showWelcomeBack, setShowWelcomeBack] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const [rehydrated, setRehydrated] = useState(false);
   const dispatch = useDispatch();
   const currentCandidate = useSelector((state) => state.interview.currentCandidate);
 
   useEffect(() => {
+    // Mark as rehydrated after a short delay to ensure Redux Persist has loaded
+    const timer = setTimeout(() => {
+      setRehydrated(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
     // Check if there's an incomplete session after Redux rehydration
-    if (currentCandidate && currentCandidate.status !== 'completed') {
+    if (rehydrated && currentCandidate && currentCandidate.status !== 'completed') {
       setShowWelcomeBack(true);
     }
-  }, [currentCandidate]);
+  }, [rehydrated, currentCandidate]);
 
   const handleContinueSession = () => {
     setShowWelcomeBack(false);
