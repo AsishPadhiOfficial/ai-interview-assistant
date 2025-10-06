@@ -25,9 +25,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate 
-        loading={<div>Loading...</div>} 
+        loading={null} 
         persistor={persistor}
-        onBeforeLift={() => {
+        onBeforeLift={async () => {
           // Clear corrupted state if needed
           try {
             const persistedState = localStorage.getItem('persist:root');
@@ -38,6 +38,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             console.error('Corrupted state detected, clearing...', e);
             localStorage.removeItem('persist:root');
           }
+          return Promise.resolve();
         }}
       >
         <ConfigProvider

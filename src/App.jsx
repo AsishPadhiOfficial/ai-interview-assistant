@@ -23,11 +23,11 @@ function App() {
   const currentCandidate = useSelector((state) => state.interview.currentCandidate);
 
   useEffect(() => {
-    // Check if there's an incomplete session
+    // Check if there's an incomplete session after Redux rehydration
     if (currentCandidate && currentCandidate.status !== 'completed') {
       setShowWelcomeBack(true);
     }
-  }, []);
+  }, [currentCandidate]);
 
   const handleContinueSession = () => {
     setShowWelcomeBack(false);
