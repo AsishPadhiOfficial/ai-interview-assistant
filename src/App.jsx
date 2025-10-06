@@ -20,32 +20,40 @@ function App() {
   const [showWelcomeBack, setShowWelcomeBack] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [rehydrated, setRehydrated] = useState(false);
+  const [welcomeDismissed, setWelcomeDismissed] = useState(false);
   const dispatch = useDispatch();
   const currentCandidate = useSelector((state) => state.interview.currentCandidate);
 
   useEffect(() => {
-    // Mark as rehydrated after a short delay to ensure Redux Persist has loaded
-    const timer = setTimeout(() => {
-      setRehydrated(true);
-    }, 100);
-    return () => clearTimeout(timer);
+    // PersistGate has already rehydrated before rendering children,
+    // so we can mark as rehydrated immediately here for instant UX.
+    setRehydrated(true);
   }, []);
 
   useEffect(() => {
     // Check if there's an incomplete session after Redux rehydration
-    if (rehydrated && currentCandidate && currentCandidate.status !== 'completed') {
+    if (
+      rehydrated &&
+      !welcomeDismissed &&
+      currentCandidate &&
+      currentCandidate.status !== 'completed'
+    ) {
       setShowWelcomeBack(true);
     }
-  }, [rehydrated, currentCandidate]);
+  }, [rehydrated, currentCandidate, welcomeDismissed]);
 
   const handleContinueSession = () => {
     setShowWelcomeBack(false);
+    setWelcomeDismissed(true); // don't re-open in this session
     setActiveTab('interviewee');
   };
 
   const handleStartNewSession = () => {
     setShowWelcomeBack(false);
-    // Current candidate will be shown in interviewee tab
+    setWelcomeDismissed(true); // prevent re-open loop
+    // Clear all persisted state so a fresh interview can start
+    dispatch(resetAllData());
+    setActiveTab('interviewee');
   };
 
   const handleResetAll = () => {
