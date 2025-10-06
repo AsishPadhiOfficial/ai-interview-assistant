@@ -1,0 +1,113 @@
+JOHN DOE
+john.doe@email.com
++1 (555) 123-4567
+
+PROFESSIONAL SUMMARY
+Experienced Full Stack Developer with 5+ years of expertise in building scalable web applications using React, Node.js, and modern JavaScript frameworks. Passionate about creating efficient, user-friendly solutions and staying current with emerging technologies.
+
+WORK EXPERIENCE
+
+Senior Full Stack Developer | Tech Innovations Inc. | San Francisco, CA
+January 2021 - Present
+• Architected and developed 10+ React applications serving 100K+ daily active users
+• Built RESTful APIs and microservices using Node.js, Express, and MongoDB
+• Implemented real-time features using WebSockets and Socket.io
+• Optimized application performance, reducing load times by 40%
+• Mentored junior developers and conducted code reviews
+• Integrated third-party services including payment gateways and authentication systems
+
+Full Stack Developer | StartupXYZ | Remote
+June 2018 - December 2020
+• Developed responsive web applications using React, Redux, and Material-UI
+• Created backend services with Node.js, Express, and PostgreSQL
+• Implemented CI/CD pipelines using GitHub Actions and Docker
+• Built and consumed RESTful and GraphQL APIs
+• Collaborated with designers to implement pixel-perfect UI components
+• Reduced bug count by 30% through comprehensive testing strategies
+
+Junior Web Developer | WebSolutions Ltd. | New York, NY
+January 2017 - May 2018
+• Built interactive user interfaces with HTML5, CSS3, and vanilla JavaScript
+• Assisted in migrating legacy jQuery applications to React
+• Debugged and resolved frontend issues across multiple browsers
+• Participated in agile development sprints and daily standups
+
+TECHNICAL SKILLS
+
+Frontend:
+• React.js (Hooks, Context API, Redux)
+• JavaScript (ES6+), TypeScript
+• HTML5, CSS3, SASS, Tailwind CSS
+• Next.js, Gatsby, Vite
+• State Management: Redux, Redux Toolkit, Zustand
+• Testing: Jest, React Testing Library, Cypress
+
+Backend:
+• Node.js, Express.js
+• RESTful API Design
+• GraphQL (Apollo Server)
+• Authentication (JWT, OAuth, Passport.js)
+• WebSockets, Socket.io
+
+Databases:
+• MongoDB, PostgreSQL, MySQL
+• Redis for caching
+• Prisma ORM, Mongoose
+
+DevOps & Tools:
+• Git, GitHub, GitLab
+• Docker, Docker Compose
+• AWS (EC2, S3, Lambda)
+• Vercel, Netlify, Heroku
+• CI/CD (GitHub Actions, Jenkins)
+• Nginx, PM2
+
+EDUCATION
+
+Bachelor of Science in Computer Science
+State University | Graduated: May 2016
+GPA: 3.7/4.0
+
+Relevant Coursework:
+• Data Structures and Algorithms
+• Web Development
+• Database Management Systems
+• Software Engineering
+• Operating Systems
+
+CERTIFICATIONS
+
+• AWS Certified Developer - Associate | 2022
+• MongoDB Certified Developer | 2021
+• Meta Frontend Developer Professional Certificate | 2020
+
+PROJECTS
+
+E-Commerce Platform (React, Node.js, MongoDB)
+• Built full-featured online shopping platform with cart, checkout, and payment integration
+• Implemented admin dashboard for inventory management
+• Integrated Stripe payment gateway
+• Deployed on AWS with automatic scaling
+
+Real-Time Chat Application (React, Socket.io, Node.js)
+• Created WebSocket-based chat with private messaging and group channels
+• Implemented user authentication and authorization
+• Added file sharing and emoji support
+• Achieved sub-second message delivery
+
+Task Management SaaS (Next.js, PostgreSQL, Prisma)
+• Developed project management tool with drag-and-drop Kanban boards
+• Built RESTful API with role-based access control
+• Implemented real-time collaboration features
+• Deployed to Vercel with PostgreSQL on Railway
+
+ADDITIONAL INFORMATION
+
+• Open source contributor to React ecosystem libraries
+• Active on Stack Overflow (5K+ reputation)
+• Regular attendee of JavaScript and React meetups
+• Blogger writing about web development best practices
+• Languages: English (Native), Spanish (Conversational)
+
+REFERENCES
+Available upon request
